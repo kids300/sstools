@@ -1,0 +1,7 @@
+# python cache
+*.pyc
+*.ipynb
+
+# settings
+settings.py
+

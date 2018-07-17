@@ -10,6 +10,7 @@ import os
 import qrcode
 from qrcode.image.pure import PymagingImage
 import argparse
+import settings
 savepath = "~/.shadowsocks/ssqr"
 savepath = os.path.expanduser(savepath)
 
@@ -61,6 +62,6 @@ def main(opts):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', dest='input', default=os.path.expanduser('~/.shadowsocks/shadowsocks.json'))
+    parser.add_argument('-i', dest='input', default=settings.work_dir)
     args = parser.parse_args(sys.argv[1:])
     main(args)
